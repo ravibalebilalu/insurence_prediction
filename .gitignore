@@ -186,5 +186,6 @@ pyvenv.cfg
 pip-selfcheck.json
 
 *.pkl
-
+artifacts
+logs 
 # End of https://www.toptal.com/developers/gitignore/api/python,venv
