@@ -7,6 +7,15 @@ from sklearn.metrics import r2_score
 from src.exception import CustomException
 from sklearn.model_selection import GridSearchCV
 
+def chop_outliers(data):
+    q1,q3 = np.percentile(data,[25,75])
+    iqr = q3 - q1
+    lower_fence = q1 -  (1.5 * iqr)
+    higher_fence = q3 + (1.5 * iqr)
+    return np.clip(data,lower_fence,higher_fence)
+
+
+
 
 def save_object(file_path,obj):
     try:

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance prediction</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+            flex-direction:column;
+        }
+        .flexbox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            flex-direction: column;
+            gap: 20px;
+             
+        }
+        form,label,option,select{
+            font-size: 30px;
+        }
+        button{
+            padding: 10px;
+            background-color: rgb(8, 54, 8);
+            margin: auto;
+            font-size: 40px;
+            border-radius: 10px;
+            color: #f80;
+            font-weight: bold;
+        }
+        .in{
+            gap: 15px;
+        }
+        p{
+          font-size:50px;
+          color:blue;
+        }
+    </style>
+</head>
+<body class="flexbox">
+    <h1>Insurence Prediction</h1>
+<form action="{{ url_for ('predict_data')}} " method="post" class="flexbox">
+
+  <div class="sex flexbox in">
+      <label for="sex">Sex</label>
+    <select name="sex" id="sex" >
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+  </div>
+<div class="smoker flexbox in">
+      <label for="smoker">Smoker</label>
+    <select name="smoker" id="smoker" >
+        <option value="no">No</option>
+        <option value="yes">yes</option>
+    </select>
+  </div>
+
+  <div class="loc_y flexbox in">
+      <label for="loc_y">LOC Y</label>
+    <select name="loc_y" id="loc_y" >
+        <option value="north">North</option>
+        <option value="south">South</option>
+    </select>
+  </div>
+ 
+<div class="loc_x flexbox in">
+      <label for="loc_x">LOC X</label>
+    <select name="loc_x" id="loc_x" >
+        <option value="west">West</option>
+        <option value="east">East</option>
+    </select>
+  </div>
+
+<div class="age flexbox in">
+      <label for="age">Age</label>
+    <input type="text" name="age" id="age" required="required">
+  </div>
+
+
+<div class="bmi flexbox in">
+      <label for="bmi">BMI</label>
+    <input type="text" name="bmi" id="bmi" required="required">
+  </div>
+
+  <div class="children flexbox in">
+      <label for="children">Children</label>
+    <input type="text" name="children" id="children" required="required">
+  </div>
+ <button type="submit">Predict</button>
+
+</form>
+
+<p>Predicted insurance cost : {{result}}</p>
+
+</body>
+</html>
