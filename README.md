@@ -1,7 +1,7 @@
 # INSURENCE PREDICTION
 ⚠️ Disclaimer :
-#### This project is built for educational purpose.Commercial use is not encouraged
- #### As model accuracy is low as compared to apps used in actual apps.And  lot of factors(independent features) will decide insurence cost other than used in this  project.
+#### Commercial use of this app is not encouraged.
+ #### As model accuracy is low as compared to models used in actual apps and  lot of factors(independent features) will decide insurence cost other than used in this  project this project is built for educational purpose only.
 
 This app predicts your insurence cost.
  
