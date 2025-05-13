@@ -27,7 +27,7 @@ def predict_data():
                 children = request.form.get("children")
         )
         
-         
+
         pred_df = data.get_data_as_dataframe()
         predict_pipeline = PredictPipeline()
         result  = predict_pipeline.predict(pred_df)[0]
