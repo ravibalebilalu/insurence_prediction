@@ -1,7 +1,10 @@
 # INSURENCE PREDICTION
+⚠️ Disclaimer :
+#### This project is built for educational purpose.Commercial use is not encouraged
+ #### As model accuracy is low as compared to apps used in actual apps.And  lot of factors(independent features) will decide insurence cost other than used in this  project.
 
 This app predicts your insurence cost.
-Isurence cost increases with health risks and age! 
+ 
 ### Below are the key factors.
 1. Sex  (male/female)
 2. Smoking (yes/no)
@@ -29,3 +32,5 @@ cd insurence_prediction
 ./initiate.sh
 ```
 and follow the instructions!
+
+License :  [apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
